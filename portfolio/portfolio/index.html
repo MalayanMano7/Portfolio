@@ -50,7 +50,7 @@
             transition: color 0.3s;
         }
 
-        .footer {
+        .contact {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -674,7 +674,6 @@
             transform: scale(1.1);
         }
 
-        /* Footer */
         footer {
             background-color: var(--bg-secondary);
             color: var(--text-secondary);
@@ -696,8 +695,36 @@
             transform: translateY(0);
         }
 
+        .mobileNav{
+            display: none;
+        }
+
+
+        .pages .menu{
+            display: none;
+        }
+
+        .menu-icon:hover + #pages {
+            display: flex;
+        }
+         
+        
+
+
+        #mobileNav{
+            height: 50px;
+            width: 80px;
+            
+            background-color: var(--bg-secondary);
+        }
+        
+
         /* Responsive Design */
         @media (max-width: 768px) {
+            nav{
+                height: 50px;
+            }
+
             nav ul {
                 flex-direction: column;
                 align-items: center;
@@ -732,6 +759,67 @@
                 flex-direction: column;
                 gap: 20px;
             }
+
+            .projects-grid{
+                flex-wrap: wrap;
+            }
+
+            .pages{
+                display: none;
+            }
+
+
+            .languages{
+                width: 350px;
+            }
+
+            .mobileNav{
+                display: flex;
+            }
+
+            .name{
+                margin-left: 0px;
+            }
+
+            .menu{
+                background-color: var(--bg-primary);
+            }
+
+            .menu-icon{
+                float: right;
+            }
+
+            .main-nav{
+                display: none;
+            }
+
+            .mobileNav{
+                height: 80px;
+                width: 100%;
+            }
+
+            #mobileNav{
+                position: absolute;
+                right: -100px;
+                width: 140px;
+                border-radius: 60px;
+            }
+
+            .contact {
+                position: static;
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                justify-content: center;
+                background-color: var(--bg-secondary);
+                color: var(--text-primary);
+                padding: 20px;
+                text-align: center;
+                transition: background-color 0.3s;
+                box-shadow: 0 -2px 10px var(--shadow);
+            }
+            
+            
         }
 
         /* Dark mode */
@@ -784,15 +872,33 @@
     </button>
 
     <!-- Navigation Menu -->
-    <nav>
+    <nav class="main-nav">
         <div>
             <h2 class="name" style="margin-bottom: 0; margin-left: 70px;">Portfolio</h2>
         </div>
-        <div class="container" style="margin-right: 110px;float: right; ">
+        <div class="container pages" id="pages"  style="margin-right: 110px;float: right; ">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <nav class="mobileNav" >
+        <div>
+            <h2 class="name" style="margin-bottom: 0; margin-left: 18px;">Portfolio</h2>
+        </div>
+        <div class="menu-icon" style="margin-right: 18px;">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="mobileNav"  style="margin-right: 110px;float: right;">
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </div>
     </nav>
@@ -804,8 +910,8 @@
             
             <div class="about-content">
                 <div class="about-text reveal">
-                    <h1 class="name">Quality Assurance</h1>
-                    <p>I am Manoj Selvan, a passionate tech enthusiast who loves exploring new technologies. I enjoy testing applications, automating workflows, and enhancing software quality through innovative solutions.</p>
+                    <h1 class="name">Manoj Selvan K</h1>
+                    <p>I am trained as an automation tester and a passionate tech enthusiast who loves exploring new technologies. I enjoy testing applications, automating workflows, and enhancing software quality through innovative solutions. </p>
                 </div>
                 <div class="about-image reveal">
                     <img src="./images/me.jpg" alt="Profile Photo">
@@ -834,6 +940,10 @@
                     <img src="./images/js.jpeg" alt="Java Script">
                     <p>Java Script</p>
                 </div>
+                  <div class="skill-item">
+                    <img src="./images/mysql.png" alt="MySQL">
+                    <p>MySQL</p>
+                </div>
                 <div class="skill-item">
                     <img src="./images/html.png" alt="HTML">
                     <p>HTML</p>
@@ -841,10 +951,6 @@
                 <div class="skill-item">
                     <img src="./images/scratch.png" alt="Scratch">
                     <p>Scratch</p>
-                </div>
-                <div class="skill-item">
-                    <img src="./images/mysql.png" alt="MySQL">
-                    <p>MySQL</p>
                 </div>
             </div>
         </div>
@@ -871,7 +977,7 @@
                         <div class="project-image">
                             <img src="./images/Brosure-removebg-preview (1).png">
                             <div class="view-project">
-                                <a href="" target="_blank" class="view-btn">View Project</a>
+                                <a href="https://github.com/Prnc-Ragav/TestAssure_Backup" target="_blank" class="view-btn">View Project</a>
                             </div>
                         </div>
                         <div class="project-info">
@@ -884,7 +990,7 @@
                         <div class="project-image">
                             <img src="./images/trophy.png">
                             <div class="view-project">
-                                <a href=""  target="_blank" class="view-btn">View Project</a>
+                                <a href="https://github.com/MalayanMano7/Tournament-Management"  target="_blank" class="view-btn">View Project</a>
                             </div>
                         </div>
                         <div class="project-info">
@@ -985,7 +1091,7 @@
                         </div>
                         <div class="project-info">
                             <h3>Animations</h3>
-                            <p>.</p>
+                            <p>Created animations in html.</p>
                         </div>
                     </div>
 
@@ -1000,7 +1106,7 @@
                         </div>
                         <div class="project-info">
                             <h3>CASCADE</h3>
-                            <p>.</p>
+                            <p>A replicated web page of Casecade by pixlatry</p>
                         </div>
                     </div>
 
@@ -1013,8 +1119,8 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Free Fire offical</h3>
-                            <p>A replicated web page of gareena free fire officl.</p>
+                            <h3>Base ball game</h3>
+                            <p>A simple baseball game </p>
                         </div>
                     </div>
 
@@ -1037,9 +1143,9 @@
     </section>
 
     <footer>
-        <div class="footer">
+        <div class="contact">
             <p>E-mail: manoj.selvan@zohocorp.com</p>
-            <p href="tel:+91938591590d">Phone : +91938591590d</a>
+            <p href="tel:+91938591590d">Phone : +91938591590</a>
         </div>
     </footer>
 
@@ -1057,6 +1163,7 @@
             document.documentElement.classList.add('dark');
             icon.classList.replace('fa-moon', 'fa-sun');
         }
+    
 
         themeToggle.addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
@@ -1071,7 +1178,6 @@
         });
 
        
-
         // Reveal animations on scroll
         function revealOnScroll() {
             const reveals = document.querySelectorAll('.reveal');
@@ -1087,7 +1193,7 @@
             }
         }
 
-        
+
         function setActiveButton(buttonId) {
             document.querySelectorAll('.languages button').forEach(btn => {
                 btn.classList.remove('active');
@@ -1097,6 +1203,7 @@
             document.getElementById(buttonId).classList.add('active');
         }
 
+
         function allProjects() {
             setActiveButton('allBtn');
             var ele = document.getElementsByClassName('projects-grid')[0];
@@ -1105,7 +1212,7 @@
                         <div class="project-image">
                             <img src="./images/Brosure-removebg-preview (1).png" >
                             <div class="view-project">
-                                <a href=""  target="_blank" class="view-btn">View Project</a>
+                                <a href="https://github.com/Prnc-Ragav/TestAssure_Backup"  target="_blank" class="view-btn">View Project</a>
                             </div>
                         </div>
                         <div class="project-info">
@@ -1119,7 +1226,7 @@
                         <div class="project-image">
                             <img src="./images/trophy.png" >
                             <div class="view-project">
-                                <a href=""  target="_blank" class="view-btn">View Project</a>
+                                <a href="https://github.com/MalayanMano7/Tournament-Management"  target="_blank" class="view-btn">View Project</a>
                             </div>
                         </div>
                         <div class="project-info">
@@ -1272,6 +1379,7 @@
                     `;
         }
 
+
         function java() {
             setActiveButton('javaBtn');
             var ele = document.getElementsByClassName('projects-grid')[0];
@@ -1279,7 +1387,7 @@
                         <div class="project-image">
                             <img src="./images/Brosure-removebg-preview (1).png" >
                             <div class="view-project">
-                                <a href=""  target="_blank" class="view-btn">View Project</a>
+                                <a href="https://github.com/Prnc-Ragav/TestAssure_Backup"  target="_blank" class="view-btn">View Project</a>
                             </div>
                         </div>
                         <div class="project-info">
@@ -1295,7 +1403,7 @@
                         <div class="project-image">
                             <img src="./images/trophy.png" >
                             <div class="view-project">
-                                <a href=""  target="_blank" class="view-btn">View Project</a>
+                                <a href="https://github.com/MalayanMano7/Tournament-Management"  target="_blank" class="view-btn">View Project</a>
                             </div>
                         </div>
                         <div class="project-info">
@@ -1318,6 +1426,7 @@
                         </div>
                     </div>`;
         }
+
 
         function javaScript() {
             setActiveButton('jsBtn');
@@ -1367,6 +1476,7 @@
                     
                     `;
         }
+
 
         function html() {
             setActiveButton('htmlBtn');
@@ -1419,6 +1529,7 @@
                     `;
         }
 
+
         function scratch() {
             setActiveButton('scratchBtn');
             var ele = document.getElementsByClassName('projects-grid')[0];
@@ -1470,6 +1581,8 @@
             revealOnScroll();
             window.addEventListener('scroll', revealOnScroll);
         });
+
+
     </script>
 </body>
 
